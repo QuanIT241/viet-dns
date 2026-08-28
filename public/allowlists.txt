@@ -1,1 +1,116 @@
+# VIET-DNS PERSONAL ALLOWLIST
+# Reviewed 2026-08-28
+# Cú pháp AdGuard Home: @@||domain^
+# Mỗi rule bao phủ domain gốc và toàn bộ subdomain.
+# Nguyên tắc:
+# - Chỉ whitelist root domain chính thức/đã xác minh.
+# - Không blanket-whitelist CDN/hạ tầng dùng chung.
+# - Domain phụ của bên thứ ba chỉ thêm khi Lịch sử truy vấn chứng minh bị block và làm dịch vụ lỗi.
 
+# ============================================================
+# 01 - DOMAIN CÁ NHÂN / HỆ THỐNG TỰ QUẢN LÝ
+# ============================================================
+@@||chacthuy.id.vn^
+@@||creatorvn.online^
+@@||dalali.io.vn^
+@@||nascloudserver.com^
+@@||samjewelry.vn^
+@@||storage.id.vn^
+@@||thachung96.io.vn^
+@@||thichhanhtu.vn^
+@@||vuongngoclucies.io.vn^
+
+# ============================================================
+# 02 - CHÍNH PHỦ / DỊCH VỤ CÔNG / PHÁP LÝ CỐT LÕI
+# ============================================================
+@@||chinhphu.vn^
+@@||dichvucong.gov.vn^
+
+# Bộ Tài chính và hệ thống trực thuộc quan trọng
+@@||mof.gov.vn^
+@@||gdt.gov.vn^
+@@||customs.gov.vn^
+@@||vnsw.gov.vn^
+@@||dangkykinhdoanh.gov.vn^
+@@||muasamcong.mpi.gov.vn^
+
+# Ngân hàng Nhà nước
+@@||sbv.gov.vn^
+
+# ============================================================
+# 03 - BẢO HIỂM XÃ HỘI / VSSID
+# ============================================================
+@@||baohiemxahoi.gov.vn^
+@@||vss.gov.vn^
+
+# ============================================================
+# 04 - BỘ CÔNG AN / VNEID / DỊCH VỤ CÔNG / XUẤT NHẬP CẢNH
+# ============================================================
+@@||bocongan.gov.vn^
+@@||mps.gov.vn^
+@@||vneid.gov.vn^
+@@||dinhdanhdientu.gov.vn^
+@@||xuatnhapcanh.gov.vn^
+@@||evisa.gov.vn^
+@@||thithucdientu.gov.vn^
+
+# ============================================================
+# 05 - NGÂN HÀNG VIỆT NAM - ROOT DOMAIN CHÍNH THỨC ĐÃ XÁC MINH
+# ============================================================
+
+# Big 4
+@@||vietcombank.com.vn^
+@@||bidv.com.vn^
+@@||vietinbank.vn^
+@@||agribank.com.vn^
+
+# Ngân hàng TMCP lớn/phổ biến
+@@||techcombank.com^
+@@||techcombank.com.vn^
+@@||mbbank.com.vn^
+@@||tpb.vn^
+@@||vpbank.com.vn^
+@@||acb.com.vn^
+@@||sacombank.com.vn^
+@@||isacombank.com.vn^
+@@||vib.com.vn^
+@@||hdbank.com.vn^
+@@||shb.com.vn^
+@@||ocb.com.vn^
+@@||seabank.com.vn^
+@@||msb.com.vn^
+@@||eximbank.com.vn^
+@@||eximbank.vn^
+@@||namabank.com.vn^
+@@||pvcombank.com.vn^
+
+# Bổ sung sau khi tra soát rộng
+@@||lpbank.com.vn^
+@@||baca-bank.vn^
+@@||baovietbank.vn^
+@@||kienlongbank.com^
+@@||vietabank.com.vn^
+@@||vietbank.com.vn^
+@@||ncb-bank.vn^
+@@||pgbank.com.vn^
+@@||saigonbank.com.vn^
+@@||bvbank.net.vn^
+@@||vikkibank.vn^
+
+# ============================================================
+# 06 - QUY TẮC AN TOÀN
+# ============================================================
+# KHÔNG whitelist blanket các hạ tầng/CDN dùng chung như:
+# amazonaws.com
+# cloudfront.net
+# cloudflare.net
+# googleapis.com
+# googlevideo.com
+# akamai.net
+# appsflyersdk.com
+#
+# Nếu website/app quan trọng lỗi:
+# 1) Mở Lịch sử truy vấn AdGuard Home.
+# 2) Tìm domain bị chặn đúng thời điểm lỗi.
+# 3) Xác minh domain thuộc dịch vụ chính thức hoặc phụ trợ bắt buộc.
+# 4) Chỉ thêm chính domain cần thiết vào allowlist.
